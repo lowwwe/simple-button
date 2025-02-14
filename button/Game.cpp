@@ -175,12 +175,12 @@ void Game::setupFontAndText()
 /// </summary>
 void Game::setupSprite()
 {
-	if (!m_logoButton.loadFromFile("ASSETS\\IMAGES\\button.jpg"))
+	if (!m_buttonTexture.loadFromFile("ASSETS\\IMAGES\\button.jpg"))
 	{
 		// simple error message if previous call fails
 		std::cout << "problem loading logo" << std::endl;
 	}
-	m_buttonSprite.setTexture(m_logoButton);
+	m_buttonSprite.setTexture(m_buttonTexture);
 	m_buttonSprite.setTextureRect(sf::IntRect{ 0,0,203,197 });
 	m_buttonSprite.setPosition(300.0f, 180.0f);
 }
